@@ -1,0 +1,54 @@
+# Triple A Salon Website
+
+A responsive, static website for Triple A Salon in Gwagwalada, Abuja.
+
+## Project structure
+
+```
+.
+├── index.html
+├── css/
+│   └── style.css
+├── js/
+│   └── script.js
+├── assets/
+│   └── images/
+│       └── triple-a-logo.png
+└── README.md
+```
+
+## Features
+
+- Responsive salon landing page and services list
+- Haircut gallery with African/Nigerian barbershop photography references
+- WhatsApp contact and appointment-message handoff
+- Email contact link (configure the salon email in `js/script.js`)
+- No database, server-side application, or backend required
+
+## Contact configuration
+
+In `js/script.js`, update:
+- `PHONE`: WhatsApp number in international format without the plus sign
+- `SHOWN`: human-readable phone number
+- `EMAIL`: salon email address (leave empty until the confirmed address is available)
+
+## Run locally
+
+This is a static site. Open `index.html` directly, or run a local preview:
+
+```sh
+php -S 127.0.0.1:8086
+```
+
+Then visit http://127.0.0.1:8086.
+
+## Photography
+
+Gallery photos are served from Pexels CDN URLs. Their individual source pages and free-use status should be retained when replacing or changing images:
+- https://www.pexels.com/photo/barber-giving-haircut-in-traditional-shop-33418521/
+- https://www.pexels.com/photo/barbershop-haircut-for-black-male-client-35157692/
+- https://www.pexels.com/photo/a-man-in-a-barbershop-7697228/
+- https://www.pexels.com/photo/close-up-of-black-man-holding-haircut-tool-7697396/
+- https://www.pexels.com/photo/man-getting-his-hair-trimmed-7447150/
+
+Images should be replaced with the salon's own client photos when available and consent has been obtained.

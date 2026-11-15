@@ -1,0 +1,17 @@
+
+var BRAND="Triple A Salon",PHONE="2348144242579",SHOWN="0814 424 2579",EMAIL="",HOURS="",HERO="https://images.pexels.com/photos/33418521/pexels-photo-33418521.jpeg?auto=compress&cs=tinysrgb&w=1600",GALLERY=["https://images.pexels.com/photos/35157699/pexels-photo-35157699.jpeg?auto=compress&cs=tinysrgb&w=900","https://images.pexels.com/photos/7697228/pexels-photo-7697228.jpeg?auto=compress&cs=tinysrgb&w=900","https://images.pexels.com/photos/7697396/pexels-photo-7697396.jpeg?auto=compress&cs=tinysrgb&w=900","https://images.pexels.com/photos/7447150/pexels-photo-7447150.jpeg?auto=compress&cs=tinysrgb&w=900"],LOGO="assets/images/triple-a-logo.png"; // HOURS, HERO and GALLERY are optional: add opening hours, a hero photo and gallery photos
+var $=function(s){return document.querySelector(s)},$$=function(s){return Array.prototype.slice.call(document.querySelectorAll(s))};
+var sv=[["Classic haircut","Scissor and clipper work shaped to your head and style."],["Fade and taper","Skin, low, mid or high fades blended clean."],["Beard trim and shape","Defined lines and a neat, even beard."],["Hot-towel shave","A close, relaxing shave with a warm towel."],["Line-up","Sharp edges around the hairline and beard."],["Kids’ cuts","Patient, gentle cuts for the little ones."]];
+$("#sv").innerHTML=sv.map(function(s,i){return'<div class="row" data-r style="--dl:'+i*.06+'s"><b>0'+(i+1)+"</b><div><h3>"+s[0]+"</h3><p>"+s[1]+"</p></div></div>"}).join("");
+$("#s").innerHTML=sv.map(function(s){return"<option>"+s[0]+"</option>"}).join("");
+var b=BRAND.split(" ");$$("[data-brand]").forEach(function(e){e.innerHTML='<img class="lg" src="'+LOGO+'" alt="">'+b[0]+(b.length>1?" <i>"+b.slice(1).join(" ")+"</i>":"")});
+$("#wa").href="https://wa.me/"+PHONE;$("#wa").textContent="WhatsApp: "+SHOWN;var mail=$("#mail");if(EMAIL){mail.href="mailto:"+EMAIL;mail.textContent="Email: "+EMAIL}else{mail.hidden=true;}if(HOURS)$("#hr").textContent="Open: "+HOURS;
+$("#ft").textContent="© 2026 "+BRAND+" · Gwagwalada, Abuja";$("#mp").href="https://www.google.com/maps/search/?api=1&query="+encodeURIComponent("Triple A Salon Gwagwalada Abuja");if(HERO){$(".hero").style.background="linear-gradient(#0e0f12d9,#0e0f12f2),url("+HERO+") center/cover"}
+var ws=["Fade","Taper","Beard","Line-up","Shave","Fresh cut"];$("#mq").innerHTML=ws.concat(ws,ws,ws).map(function(w){return"<span>"+w+"</span>"}).join("");
+GALLERY.forEach(function(u,i){var t=$$(".tile")[i];if(t)t.style.backgroundImage="url("+u+")"});
+addEventListener("scroll",function(){var h=document.documentElement.scrollHeight-innerHeight;$("#pg").style.transform="scaleX("+(h>0?scrollY/h:0)+")"},{passive:true});
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("on");io.unobserve(e.target)}})},{threshold:.15});
+$$("[data-r]").forEach(function(e){io.observe(e)});
+var co=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;co.unobserve(e.target);var n=+e.target.dataset.n,s=0;(function u(){s++;e.target.textContent=Math.round(n*s/30);if(s<30)requestAnimationFrame(u)})()})});
+$$("[data-n]").forEach(function(e){co.observe(e)});
+$("#f").onsubmit=function(ev){ev.preventDefault();var t="Hello "+BRAND+", I’m "+$("#n").value+". I’d like a "+$("#s").value+" on "+$("#d").value+".";window.open("https://wa.me/"+PHONE+"?text="+encodeURIComponent(t),"_blank")};

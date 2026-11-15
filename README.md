@@ -21,6 +21,7 @@ A responsive, static website for Triple A Salon in Gwagwalada, Abuja.
 
 - Responsive salon landing page and services list
 - Haircut gallery with African/Nigerian barbershop photography references
+- Visible barbershop hero photograph and real barber-tools/clipper feature image
 - WhatsApp contact and appointment-message handoff
 - Email contact link (configure the salon email in `js/script.js`)
 - No database, server-side application, or backend required

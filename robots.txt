@@ -1,0 +1,3 @@
+# Robots.txt — salon
+User-agent: *
+Allow: /

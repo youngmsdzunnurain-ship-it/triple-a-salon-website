@@ -53,3 +53,16 @@ Gallery photos are served from Pexels CDN URLs. Their individual source pages an
 - https://www.pexels.com/photo/man-getting-his-hair-trimmed-7447150/
 
 Images should be replaced with the salon's own client photos when available and consent has been obtained.
+
+
+## Search engine and launch readiness
+
+The page includes a descriptive title and meta description, Open Graph/Twitter sharing metadata, structured local business information (JSON-LD), and a basic `robots.txt`.
+
+Before launch on a public domain:
+- Set the canonical URL and add a sitemap using the final HTTPS domain.
+- Verify the domain in Google Search Console and submit the sitemap.
+- Add a final social-sharing image with appropriate rights and descriptive alt text.
+- Test all navigation, contact actions, image loading, and downloads on mobile and desktop.
+
+Search engines decide when and whether to index a site; metadata improves clarity but does not guarantee ranking or immediate appearance in results.

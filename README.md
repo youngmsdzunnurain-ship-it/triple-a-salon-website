@@ -66,3 +66,7 @@ Before launch on a public domain:
 - Test all navigation, contact actions, image loading, and downloads on mobile and desktop.
 
 Search engines decide when and whether to index a site; metadata improves clarity but does not guarantee ranking or immediate appearance in results.
+
+
+## Privacy and accessibility
+A privacy notice is available at `privacy.html`. Booking details are passed to WhatsApp only when the visitor chooses to submit; this static website does not store bookings. Booking fields have visible labels and gallery images load lazily with alternative text.

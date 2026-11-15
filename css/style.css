@@ -86,3 +86,6 @@ main,footer{position:relative;z-index:1}
 .hero .w{z-index:2}
 .hero h1,.hero .lead,.hero .tag,.hero .cta{position:relative;z-index:2}
 @media (min-width:861px){.hero{background-position:center 42%}}
+
+/* Lazy-loaded gallery images retain the existing card treatment */
+.tile>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}.tile>*{position:relative;z-index:2}.bk form label{display:block;font-weight:600;margin:.25rem 0 -.45rem}.bk input,.bk select{min-height:48px}

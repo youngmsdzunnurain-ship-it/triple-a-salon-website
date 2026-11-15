@@ -37,13 +37,9 @@ h1 .l:nth-child(3){color:#d4a24c}
 .lead{max-width:42ch;color:#c9c8c0;font-size:1.15rem;margin-bottom:1.8rem}
 .cta{display:flex;gap:.8rem;flex-wrap:wrap}
 .stage{display:grid;place-items:center;opacity:0;animation:fd 1s .8s forwards}
-.poleW{position:relative;width:120px;padding:26px 0}
-.cap{position:absolute;left:-6px;right:-6px;height:30px;border-radius:50%;background:linear-gradient(#f1d089,#a9772a);z-index:2}.cap.a{top:0}.cap.b{bottom:0}
-.pole{height:min(52vw,380px);min-height:280px;border-radius:14px;border:6px solid #e9e7df;overflow:hidden;position:relative;box-shadow:0 0 70px -10px #3a6df080,0 0 70px -20px #e5383b99}
-.pole::before{content:"";position:absolute;inset:-150px 0;background:repeating-linear-gradient(-45deg,var(--red) 0 24px,#fff 24px 48px,var(--blu) 48px 72px,#fff 72px 96px);animation:pl 2.6s linear infinite}
-@keyframes pl{to{transform:translateY(135.76px)}}
-.pole::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#ffffff55,transparent 35%,#00000066)}
-@media (max-width:860px){.hero .w{grid-template-columns:1fr}.stage{order:-1}.pole{min-height:200px;height:200px}}
+.stage{display:flex;justify-content:center;align-items:center;opacity:0;animation:fd 1s .8s forwards;min-width:0}
+.hero-clipper{display:block;width:min(100%,390px);height:clamp(260px,36vw,430px);object-fit:cover;object-position:center;border:1px solid #d4a24c66;border-radius:20px;box-shadow:0 24px 70px #0009,0 0 45px #d4a24c20}
+@media (max-width:860px){.hero .w{grid-template-columns:1fr}.stage{order:-1}.hero-clipper{width:min(100%,440px);height:clamp(190px,55vw,270px);object-position:center 44%}.hero{padding-top:2rem}.hero::before{background:linear-gradient(90deg,#0e0f12b8,#0e0f1270)}}
 .mq{background:var(--red);color:#fff;overflow:hidden;padding:.8rem 0;transform:rotate(-1deg);margin:-.4rem -2%;position:relative;z-index:2}
 .mq div{display:flex;width:max-content;animation:sl 24s linear infinite;font:800 1.7rem var(--d);text-transform:uppercase;letter-spacing:.06em}
 .mq span{padding-right:2rem}.mq span::after{content:"✂";margin-left:2rem}
@@ -84,3 +80,9 @@ main,footer{position:relative;z-index:1}
 .tile:hover{filter:saturate(1.08)}
 .det a[hidden]{display:none}
 @media (max-width:760px){.lk{gap:.45rem}.lk .btn{padding:.55rem .75rem;font-size:.88rem}.logo{font-size:1.35rem}.lg{width:36px;height:36px}}
+
+/* Hero photography: clearer barbershop background and real clipper feature image */
+.hero{background-color:#0e0f12;background-repeat:no-repeat;background-size:cover;background-position:center}
+.hero .w{z-index:2}
+.hero h1,.hero .lead,.hero .tag,.hero .cta{position:relative;z-index:2}
+@media (min-width:861px){.hero{background-position:center 42%}}

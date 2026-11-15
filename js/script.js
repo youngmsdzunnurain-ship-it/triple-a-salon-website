@@ -6,7 +6,7 @@ $("#sv").innerHTML=sv.map(function(s,i){return'<div class="row" data-r style="--
 $("#s").innerHTML=sv.map(function(s){return"<option>"+s[0]+"</option>"}).join("");
 var b=BRAND.split(" ");$$("[data-brand]").forEach(function(e){e.innerHTML='<img class="lg" src="'+LOGO+'" alt="">'+b[0]+(b.length>1?" <i>"+b.slice(1).join(" ")+"</i>":"")});
 $("#wa").href="https://wa.me/"+PHONE;$("#wa").textContent="WhatsApp: "+SHOWN;var mail=$("#mail");if(EMAIL){mail.href="mailto:"+EMAIL;mail.textContent="Email: "+EMAIL}else{mail.hidden=true;}if(HOURS)$("#hr").textContent="Open: "+HOURS;
-$("#ft").textContent="© 2026 "+BRAND+" · Gwagwalada, Abuja";$("#mp").href="https://www.google.com/maps/search/?api=1&query="+encodeURIComponent("Triple A Salon Gwagwalada Abuja");if(HERO){$(".hero").style.background="linear-gradient(#0e0f12d9,#0e0f12f2),url("+HERO+") center/cover"}
+$("#ft").textContent="© 2026 "+BRAND+" · Gwagwalada, Abuja";$("#mp").href="https://www.google.com/maps/search/?api=1&query="+encodeURIComponent("Triple A Salon Gwagwalada Abuja");if(HERO){$(".hero").style.backgroundImage="linear-gradient(90deg,rgba(14,15,18,.93) 0%,rgba(14,15,18,.72) 48%,rgba(14,15,18,.34) 100%),url("+HERO+")";$(".hero").style.backgroundPosition="center";$(".hero").style.backgroundSize="cover"}
 var ws=["Fade","Taper","Beard","Line-up","Shave","Fresh cut"];$("#mq").innerHTML=ws.concat(ws,ws,ws).map(function(w){return"<span>"+w+"</span>"}).join("");
 GALLERY.forEach(function(u,i){var t=$$(".tile")[i];if(t)t.style.backgroundImage="url("+u+")"});
 addEventListener("scroll",function(){var h=document.documentElement.scrollHeight-innerHeight;$("#pg").style.transform="scaleX("+(h>0?scrollY/h:0)+")"},{passive:true});
